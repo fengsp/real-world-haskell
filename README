@@ -1,3 +1,12 @@
-Code examples from the book Real World Haskell
-Read the book at http://book.realworldhaskell.org/read/
-Explore the origin repository https://github.com/bos/rwh
+Real World Haskell
+
+    Code examples from the book Real World Haskell
+
+    Read the book at http://book.realworldhaskell.org/read/
+    Explore the original repository https://github.com/bos/rwh
+
+    Copyright 2007, 2008 Bryan O'Sullivan, Don Stewart, and John Goerzen.
+    This work is licensed under a Creative Commons Attribution-Noncommercial
+    3.0 License(http://creativecommons.org/licenses/by-nc/3.0/).
+
+    If you feel anything wrong, feedbacks or pull requests are welcomed
