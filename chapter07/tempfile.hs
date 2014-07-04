@@ -2,7 +2,7 @@
 
 import System.IO
 import System.Directory(getTemporaryDirectory, removeFile)
-import System.IO.Error(catch)
+import System.IO.Error(catchIOError)
 import Control.Exception(finally)
 
 -- The main entry point.  Work with a temp file in myAction.
@@ -68,7 +68,7 @@ withTempFile pattern func =
        -- two functions: one to run, and a different one to run if the
        -- first raised an exception.  If getTemporaryDirectory raised an
        -- exception, just use "." (the current working directory).
-       tempdir <- catch (getTemporaryDirectory) (\_ -> return ".")
+       tempdir <- catchIOError (getTemporaryDirectory) (\_ -> return ".")
        (tempfile, temph) <- openTempFile tempdir pattern 
 
        -- Call (func tempfile temph) to perform the action on the temporary

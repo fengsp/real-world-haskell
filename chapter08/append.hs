@@ -1,4 +1,5 @@
 -- chapter08/append.hs
+import Prelude hiding ((++))
 
 (++) :: [a] -> [a] -> [a]
 

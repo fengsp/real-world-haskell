@@ -1,5 +1,7 @@
 -- chapter06/eqclasses.hs
 
+data Color = Red | Green | Blue
+
 class BasicEq a where
     isEqual :: a -> a -> Bool
 
@@ -19,13 +21,13 @@ class BasicEq3 a where
     isNotEqual3 :: a -> a -> Bool
     isNotEqual3 x y = not (isEqual3 x y)
 
-class  Eq a  where
-    (==), (/=) :: a -> a -> Bool
+class MyEq a where
+    (===), (/==) :: a -> a -> Bool
 
        -- Minimal complete definition:
        --     (==) or (/=)
-    x /= y     =  not (x == y)
-    x == y     =  not (x /= y)
+    x /== y     =  not (x === y)
+    x === y     =  not (x /== y)
 
 instance BasicEq3 Color where
     isEqual3 Red Red = True

@@ -1,4 +1,5 @@
 -- chapter03/Tree.hs
+module Tree where
 
 data Tree a = Node a (Tree a) (Tree a)
             | Empty

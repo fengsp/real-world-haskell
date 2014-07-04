@@ -2,6 +2,9 @@ Real World Haskell
 
     Code examples from the book Real World Haskell
 
+    Some of the code are out of date to work with the latest GHC compiler,
+    I modify them so that they work as expected.
+
     Read the book at http://book.realworldhaskell.org/read/
     Explore the original repository https://github.com/bos/rwh
 

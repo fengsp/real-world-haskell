@@ -46,7 +46,7 @@ listMatches dirName pat = do
     dirName' <- if null dirName
                 then getCurrentDirectory
                 else return dirName
-    handle (const (return [])) $ do
+    handle ((const (return [])) :: IOError -> IO [String]) $ do
         names <- getDirectoryContents dirName'
         let names' = if isHidden pat
                      then filter isHidden names

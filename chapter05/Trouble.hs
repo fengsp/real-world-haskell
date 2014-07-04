@@ -1,4 +1,5 @@
 -- chapter05/Trouble.hs
+import Data.Char (toUpper)
 
 upcaseFirst (c:cs) = toUpper c -- forgot ":cs" here
 

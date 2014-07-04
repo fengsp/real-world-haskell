@@ -1,4 +1,5 @@
 -- chapter06/Overlap.hs
+{-# LANGUAGE FlexibleInstances #-}
 
 class Borked a where
     bork :: a -> String

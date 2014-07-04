@@ -1,10 +1,10 @@
 -- chapter03/Nullable.hs
 
-data Maybe a = Just a
-             | Nothing
+data MyMaybe a = MyJust a
+               | MyNothing
 
-someBool = Just True
+someBool = MyJust True
 
-someString = Just "something"
+someString = MyJust "something"
 
-wrapped = Just (Just "wrapped")
+wrapped = MyJust (MyJust "wrapped")

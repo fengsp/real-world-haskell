@@ -1,4 +1,5 @@
 -- chapter04/SuffixTree.hs
+import Data.List
 
 suffixes :: [a] -> [[a]]
 suffixes xs@(_:xs') = xs : suffixes xs'

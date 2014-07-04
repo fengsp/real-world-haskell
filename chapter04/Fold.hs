@@ -1,4 +1,5 @@
 -- chapter04/Fold.hs
+import Prelude hiding (filter, foldl, foldr)
 
 foldl :: (a -> b -> a) -> a -> [b] -> a
 
@@ -62,3 +63,6 @@ strictPair (a,b) = a `seq` b `seq` (a,b)
 
 strictList (x:xs) = x `seq` x : strictList xs
 strictList []     = []
+
+someFunc = error ""
+anotherFunc = error ""
